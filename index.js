@@ -4,16 +4,12 @@ const path = require("path");
 const Engineer = require("./lib/Engineer");
 const Manager = require("./lib/Manager");
 const Intern = require("./lib/Intern");
-const generateHTML = require("./src/generateHtml");
+const render = require("./src/generateHtml");
 const teamArray = [];
 
-// You need a fucntion that will generate html
+// Added
 
-// - WHEN I start the application THEN I am prompted to enter the team manager’s name, employee ID, email address, and office number
-// - WHEN I enter the team manager’s name, employee ID, email address, and office number THEN I am presented with a menu with the option to add an engineer or an intern or to finish building my team
-// - WHEN I select the engineer option THEN I am prompted to enter the engineer’s name, ID, email, and GitHub username, and I am taken back to the menu
-// - WHEN I select the intern option THEN I am prompted to enter the intern’s name, ID, email, and school, and I am taken back to the menu
-// - WHEN I decide to finish building my team THEN I exit the application, and the HTML is generated
+
 
 function start() {
   inquirer
@@ -149,18 +145,9 @@ function addIntern() {
 
 function writeHTML() {
   console.log(teamArray);
+  fs.writeFileSync('./dist/index.html', render(teamArray), 'utf8')
+
 }
 start();
 
-// - WHEN I am prompted for my team members and their information THEN an HTML file is generated that displays a nicely formatted team roster based on user input (Write a function that will allow you to generate html page)
 
-// Answers Call back
-// .then((answers) => {
-
-//   const htmlPageContent = generateHTML(answers);
-
-//   fs.writeFile('index.html',htmlPageContent,(err) => {
-//    err ? console.log(err) : console.log('Sucessful')
-// });
-
-// Dynamic

@@ -1,20 +1,41 @@
-const generateHTML = (answers) => ` 
+function createHtml(team){
+
+function managerHtml(manager){
+  return`
+  `
+}
+function engineerHtml(engineer){
+  return`
+  `
+}
+function internHtml(intern){
+  return`
+  `
+}
+
+  const cards = []
+
+  cards.push(team.filter(item =>item.getRole()=== 'Manager').map(manager => managerHtml(manager)))
+  cards.push(team.filter(item =>item.getRole()=== 'Engineer').map(Engineer => EngineerHtml(Engineer)))
+  cards.push(team.filter(item =>item.getRole()=== 'Intern').map(Intern => InternHtml(Intern)))
+
+  return cards.join('')
+}
+
+module.exports =  (answers) => {
+  return` 
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
   <title>Team Profile Generator</title>
 </head>
 <body>
 
-
-// - WHEN I click on an email address in the HTML THEN my default email program opens and populates the TO field of the email with the address
-
-// - WHEN I click on the GitHub username THEN that GitHub profile opens in a new tab
+${createHtml(answers)}
 
 </body>
-</html>`;
-
-module.exports = generateHTML;
+</html>`
+};
