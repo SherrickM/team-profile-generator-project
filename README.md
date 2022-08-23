@@ -22,3 +22,4 @@ GIVEN a command-line application that accepts user input:
 
 ## Video Walkthrough
 
+[Video Walkthrough](https://drive.google.com/file/d/1WZIRuKW6YRli3TpTYayGNQVHdiP2YW6o/view)
