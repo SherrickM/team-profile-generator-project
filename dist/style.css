@@ -1,0 +1,30 @@
+body{
+  background-color: #e9dfce
+}
+
+.card{
+  margin: 10px;
+  border-radius: 10px;
+}
+
+.card-head{
+  background-color: burlywood;
+  text-align: center;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  
+}
+.card-body{
+  background-color: whitesmoke;
+}
+
+main{
+  padding: 10vh;
+  display: flex;
+  justify-content: center;
+  
+}
+
+.jumbotron{
+  text-align: center;
+}
